@@ -1,0 +1,160 @@
+@include google-font('Open+Sans');
+@include google-font('Source+Sans+Pro');
+
+.history {
+	margin-bottom: 80px;
+	width: 100%;
+	background: url(../assets/img/history-bg.png) no-repeat;
+	background-size: cover;
+	padding: 65px 0;
+	&__flex {
+		display: flex; 
+		flex-direction: row;
+	}
+	&__img {
+		flex: 1 1 50%;
+		& > img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__right {
+		flex: 1 1 50%;
+		padding-left: 25px;
+		&-text {
+			color: #7f7f7f;
+		    font-size: 16px;
+		    font-family: 'Roboto';
+		    text-align: justify;
+		    line-height: 32px;
+		    margin-top: 25px;
+		}
+		&-btn--grey {
+			@include grey-button;
+		}
+		&-btn--yellow {
+			@include yellow-button;
+			margin-top: 20px;
+			padding: 15px 10px;
+			&:hover {
+				@include onHover;
+			}
+		}
+	}
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1005px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .wrapper {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .wrapper {
+        max-width: 750px;
+	}
+	.history {
+		&__flex {
+			flex-direction: column;
+		}
+		&__img {
+			flex: 1 1 100%;
+			margin-bottom: 30px;
+			text-align: center;
+			& > img {
+				width: 80%;
+				height: auto;
+				object-fit: auto;
+			}
+		}
+		&__right {
+			flex: 1 1 100%;
+			padding-right: 0;
+			text-align: center;
+			&-btn--grey {
+				margin: 15px auto;
+			}
+			&-btn--yellow {
+				margin: 15px auto;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .wrapper {
+        max-width: 600px;
+	}
+	.history {
+		&__flex {
+			flex-direction: column;
+		}
+		&__img {
+			flex: 1 1 100%;
+			margin-bottom: 30px;
+			text-align: center;
+			& > img {
+				width: 80%;
+				height: auto;
+				object-fit: auto;
+			}
+		}
+		&__right {
+			width: 95%;
+			margin: 0 auto;
+			flex: 1 1 100%;
+			padding-right: 0;
+			text-align: center;
+			&-btn--grey {
+				margin: 15px auto;
+			}
+			&-btn--yellow {
+				margin: 15px auto;
+			}
+		}
+	}
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+   to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+ .fadeInRight {
+  animation: fadeInRight 1.5s;
+}
+
+ @keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+   to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+ .fadeInLeft {
+  animation: fadeInLeft 1.5s;
+} 
+

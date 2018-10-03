@@ -1,0 +1,36 @@
+.how-we-work {
+    width: 100%;
+    background-image: url(../assets/img/how_we_work_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    &__image {
+        width: 100%;
+    }
+    &__image-mobile {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@include large-screens {
+    .how-we-work__image {
+        display: none;
+        visibility: hidden;
+    }
+    .how-we-work__image-mobile {
+        display: block;
+        visibility: visible;
+    }
+}
+
+@include medium-screens {
+    .how-we-work__image {
+        display: none;
+        visibility: hidden;
+    }
+    .how-we-work__image-mobile {
+        display: block;
+        visibility: visible;
+    }
+}

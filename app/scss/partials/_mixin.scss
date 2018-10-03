@@ -1,0 +1,99 @@
+// === MEDIA BREAKPOINTS ===
+
+// Small devices (landscape phones, 576px and up)
+@mixin small-screens() {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin medium-screens() {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin large-screens() {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin extra-large-screens() {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+
+// === GOOGLE FONTS ===
+@mixin google-font($font) {
+  $font: unquote($font);
+  @import url(https://fonts.googleapis.com/css?family=#{$font});
+}
+
+// === BUTTONS ===
+
+@mixin grey-button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  white-space: nowrap;
+  user-select: none;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-family: 'Source Sans Pro';
+
+  background-color: #464646;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 24px;
+  border-radius: 3px;
+  padding: 10px 25px;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+@mixin yellow-button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  white-space: nowrap;
+  user-select: none;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+
+  background-color: #ffc038;
+  color: #715d3a;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+@mixin onHover {
+  background-color: #464646;
+  color: #ffffff;
+}
+
+// === HEADERS ===
+@mixin section-header() {
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background: #464646;
+  color: #fff;
+  display: inline;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .5);
+}
+

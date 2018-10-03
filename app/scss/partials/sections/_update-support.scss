@@ -1,0 +1,97 @@
+/* UPDATES & SUPPORT */
+@include google-font('Open+Sans:700|Roboto:100,300,700|Source+Sans+Pro:700');
+.supports {
+  padding-top: 0;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+
+  &__heading {
+    margin: em(160px) auto;
+
+    .heading__title {
+      text-align: center;
+      h4 {
+        position: relative;
+        font-size: 24px;
+        font-family: 'Source Sans Pro', sans-serif;;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: #464646;
+        color: #fff;
+        padding: 10px 100px;
+        display: inline;
+        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .5);
+        @include small-screens {
+          font-size: 16px;
+          padding: 10px 77px;
+        }
+      }
+      .arrow--right {
+        &__img {
+          width: 70px;
+          height: 110px;
+          margin-top: 10px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(300%);
+        }
+      }
+    }
+  }
+
+  &__content {
+
+    p {
+      word-spacing: .5px;
+      line-height: 1.5;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+    }
+    .supports__btn {
+      button {
+        @include yellow-button;
+        margin: 15px 0;
+        padding: 15px 30px;
+        color: #464646;
+        font-size: 12px;
+        font-weight: 700;
+       
+        @include small-screens {
+          margin-top: 30px;
+          margin-left: 50%;
+          transform: translateX(-50%);
+        }
+        &:hover {
+          @include onHover;
+        }
+      }
+    }
+  }
+  &__inner {
+    max-width: 1005px;
+    margin: 0 auto;
+
+    @include small-screens {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .supports__content {
+        text-align: justify;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      .supports__img {
+        margin-bottom: 60px;
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+      }
+    }
+  }
+}

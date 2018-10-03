@@ -1,0 +1,222 @@
+@include google-font('Open+Sans:400,700|Roboto:100,300,400,500,700|Source+Sans+Pro:700');
+
+.main-menu {
+  font-family: 'roboto', sans-serif;
+
+  &__cap {
+    background: $header-bg-color;
+    width: 100%;
+    height: 50px;
+    @include medium-screens {
+      display: none;
+    }
+  }
+
+  .sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+  }
+
+  &__logo {
+    width: 190px;
+    height: 38px;
+    transition: all .3s;
+    &:hover {
+      transform: scale3d(1.15, 1.15, 1.15);
+    }
+
+    @include large-screens {
+      width: 170px;
+    }
+
+    @include medium-screens {
+      margin-top: -5px;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .navbar {
+    margin-bottom: -20px;
+
+    .container {
+      max-width: 1005px;
+      margin: 0 auto;
+    }
+  }
+
+  .navbar-default {
+    background-color: $header-bg-color;
+    border: transparent;
+    padding-bottom: 5px;
+    .navbar-toggle {
+      border: none;
+      background-color: #464646;
+    }
+    .icon-bar {
+      background-color: white;
+    }
+    .navbar-nav {
+      margin-top: 5px;
+      .active {
+        &__link {
+          z-index: 100;
+          background-color: transparent;
+          color: #464646;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 700;
+          transition: .3s;
+          &:hover {
+            background-color: transparent;
+            color: #fff;
+          }
+          @include large-screens {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    @include medium-screens {
+      margin-bottom: 10px;
+    }
+  }
+
+  .contact-number {
+    position: relative;
+    bottom: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #464646;
+    margin-right: 14px;
+  }
+}
+
+.header {
+  font-family: 'roboto', sans-serif;
+  padding-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffc038;
+  color: #fff;
+  @include large-screens {
+    padding-top: 100px;
+  }
+
+  @include medium-screens {
+    padding-top: 50px;
+  }
+
+  .homepage-style {
+    padding-top: 50px;
+    max-width: 1005px;
+    margin: 0 auto;
+
+    .top-arrow {
+      width: 393px;
+      height: 50px;
+      margin: 0 auto;
+    }
+
+    @include small-screens {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .unique-apps {
+    margin-top: -60px;
+    max-width: 400px;
+    @include large-screens {
+      margin-top: -100px;
+    }
+    @include medium-screens {
+      max-width: 100%;
+      margin-top: -100px;
+    }
+
+    @include small-screens {
+      margin-top: 0;
+    }
+
+    &__heading {
+      font-size: 42px;
+      font-weight: 700;
+      text-transform: uppercase;
+      @include large-screens {
+        margin-top: 100px;
+        font-size: 35px;
+      }
+    }
+
+    &__desc {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 2;
+      word-spacing: 2px;
+      @include large-screens {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      p:nth-of-type(2) {
+        margin-top: -10px;
+      }
+    }
+    &__btn {
+      margin: 15px 0;
+      background: #464646;
+      padding: 15px 20px;
+      color: #fff;
+      font-size: 16px;
+      transition: .3s;
+      border: none;
+      border-radius: 2px;
+      box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .5);
+
+      &:hover {
+        background: #465465;
+        color: #fff;
+      }
+
+      .btn__icon {
+        margin-left: 5px;
+        font-size: 20px;
+        transform: rotate(60deg);
+      }
+    }
+  }
+
+  .carousel-indicators {
+    bottom: -50px;
+    &__item {
+      background: #464646;
+      border: 0;
+    }
+
+    .active {
+      background: #ffffff;
+    }
+  }
+
+  .slider-area {
+    margin-left: -100px;
+    margin-top: 20px;
+    @include large-screens {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+}
+
+
+

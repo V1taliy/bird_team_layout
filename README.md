@@ -1,2 +1,3 @@
-# bird_team_layout
-In project folder use comand "npm i" to install all node_modules
+# unique-tech_bird
+
+[Click me](https://mateacademy-fe-study.github.io/unique-tech_bird/app/)

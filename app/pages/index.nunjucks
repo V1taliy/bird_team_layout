@@ -1,0 +1,19 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/welcome.html" %}
+{% include "partials/what-we-do.html" %}
+{% include "partials/how-we-work.html" %}
+{% include "partials/features.html" %}
+{% include "partials/package.html" %}
+{% include "partials/history.html" %}
+{% include "partials/related-product.html" %}
+{% include "partials/members.html" %}
+{% include "partials/update-support.html" %}
+{% include "partials/our-order.html" %}
+{% include "partials/bottom.html" %}
+{% include "partials/modal-window.html" %}
+
+{% endblock %}

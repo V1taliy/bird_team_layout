@@ -1,0 +1,76 @@
+/* Popup Box */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 8888; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    &-content {
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #fefefe;
+        margin: 10vh auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%; /* Could be more or less, depending on screen size */
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.button {
+ 	background:none;
+  border-top:none;
+  border-right:none;
+  border-left:none;
+  border-bottom:#02274a 1px solid;
+  padding:0 0 3px 0;
+  font-size:16px;
+}
+
+button.button:hover {
+  border-bottom:#a99567 1px solid;
+  color:#a99567;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .modal {
+        &-content {
+            width: 80%;
+            & > img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .modal {
+        &-content {
+            width: 95%;
+            & > img {
+                width: 100%;
+            }
+        }
+    }
+}
